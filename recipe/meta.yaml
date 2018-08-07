@@ -12,12 +12,14 @@ source:
   sha256: 0b3f782bc24845d85f36bafbff0f2f1384dc72df730fda4e7924ec1a70baca5a
 
 build:
-  number: 0
-  skip: True  # [win] 
+  number: 1
+  skip: True  # [win]
 
 requirements:
   build:
     - cmake
+    - {{ compiler('c') }}
+  host:
   run:
 
 test:
@@ -32,12 +34,12 @@ about:
   license_file: 'COPYING'
   summary: 'LAPACK provides routines for solving systems of equations'
   description: |
-      The CLAPACK library was built using a Fortran to C 
-      conversion utility called f2c. The entire Fortran 77 
-      LAPACK library is run through f2c to obtain C code, 
-      and then modified to improve readability. CLAPACK's 
-      goal is to provide LAPACK for someone who does not have 
-      access to a Fortran compiler. 
+      The CLAPACK library was built using a Fortran to C
+      conversion utility called f2c. The entire Fortran 77
+      LAPACK library is run through f2c to obtain C code,
+      and then modified to improve readability. CLAPACK's
+      goal is to provide LAPACK for someone who does not have
+      access to a Fortran compiler.
   dev_url: http://www.netlib.org/clapack/
 
 extra:
